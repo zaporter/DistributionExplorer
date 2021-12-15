@@ -14,8 +14,12 @@ function App() {
 
 <br/>
 <br/>
-        Note: This project uses a Lanczos estimator for the Gamma function and another estimator for the error function those estimators along with using JavaScript basic floats can incur non-trivial amounts of error in some distributions.
-                </p>
+        Note: This project uses a Lanczos estimator for the Gamma function and another estimator for the error function. Those estimators along with using JavaScript basic floats can incur non-trivial amounts of error in some distributions.
+                
+                <br/>
+                <br/>
+                Source code: <a href={'https://github.com/zaporter/DistributionExplorer'}>https://github.com/zaporter/DistributionExplorer</a>
+            </p>
         </div>
             <hr/>
         <DistributionMainElement/>

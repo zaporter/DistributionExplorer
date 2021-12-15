@@ -32,7 +32,7 @@ function DistributionMainElement(props){
     
     return (
         <div className={styles.DistributionMainElementDiv}>
-            <div style={{margin:'4em', 'margin-bottom':'4em', bottom:'4em'}}>
+            <div style={{margin:'4em', 'marginBottom':'4em', bottom:'4em'}}>
             <Dropdown options={options} onChange={onDropdownChange} value={currentDist}/>
             <DistributionDisplay key={getDistIDFromName(currentDist)} distribution={getDistFromName(currentDist)} />
             </div>
