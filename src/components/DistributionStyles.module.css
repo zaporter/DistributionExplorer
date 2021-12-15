@@ -1,0 +1,25 @@
+.DistributionMainElementDiv {
+    background-color:#FEE9E1;
+    border-radius:2em;
+    padding:0.001em;
+    margin:0em;
+    position:relative;
+}  
+.DistributionDisplayMain {
+    width:100%;
+    margin:auto;
+}
+.DistributionDisplayLeft {
+    float:left; 
+    width:50%;
+}
+.DistributionDisplayRight{
+    float:right;
+    width:50%;
+}
+.DataGenerator {
+    background-color:#7A9E9F;
+    padding:1em;
+    margin:0em;
+    border-radius:5px;
+}
