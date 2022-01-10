@@ -98,7 +98,7 @@ function DataGenerator(props){
                 onClick={generateButtonPressed}
             >Generate!</button>
             <br/>
-            <textarea style={{width:'100%',height:'5em'}}readOnly value={points.reduce((all, point,index) => (all + (index>0?", ":"")+point),"")}/>
+            <textarea style={{width:'100%',height:'5em'}} readOnly value={points.reduce((all, point,index) => (all + (index>0?", ":"")+point),"")}/>
             <DataAnalysis points={points}/>
         </div>
     )

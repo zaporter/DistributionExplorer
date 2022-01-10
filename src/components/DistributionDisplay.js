@@ -29,16 +29,17 @@ function DistributionDisplay(props) {
         plotlb = plotlb<distribution.theoreticalLowerBound?0:plotlb;
         plotub = expectedValue+2*stddev;
     }
+    let shouldSplitVerically = window.innerWidth>500;
     return (
-    <div className={styles.DistributionDisplayMain}>
-        <div className={styles.DistributionDisplayLeft}>
+        <div className={shouldSplitVerically?styles.DistributionDisplayMain:''}>
+        <div className={shouldSplitVerically?styles.DistributionDisplayLeft:''}>
             <p>{distribution.name}</p>
             {Object.entries(params).map( (entry) =>
                 <ParamEditor key={entry[0]} param={entry[1]} onChange={paramCallback}/>
             )}
             <DistributionStats params={params} distribution={distribution} />
         </div>
-        <div className={styles.DistributionDisplayRight}>
+        <div className={shouldSplitVerically?styles.DistributionDisplayLeft:''}>
             <ParamChecker params={params} paramConstraints={distribution.paramConstraints}>
                 <Plotter title={`CDF of ${distribution.name} distribution`} lb={plotlb} ub={plotub} numSteps={50} evalFunction={(x)=>distribution.cdf(x,params)} width={20} height={20}/>
                 <br/><br/><DataGenerator params={params} distribution={distribution}/>
